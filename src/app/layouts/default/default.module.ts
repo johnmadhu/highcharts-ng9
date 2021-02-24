@@ -4,14 +4,14 @@ import { RouterModule } from '@angular/router';
 import { DefaultComponent } from './default.component';
 import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.component';
 import { PostsComponent } from 'src/app/modules/posts/posts.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { AreaComponent } from 'src/app/widget/area/area.component';
 
+import { SharedModule } from 'src/app/shared/shared.module';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { MatSidenavModule} from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
-import { AreaComponent } from 'src/app/widget/area/area.component';
-
-
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,9 @@ import { AreaComponent } from 'src/app/widget/area/area.component';
     SharedModule,
     HighchartsChartModule,
     MatSidenavModule,
-    MatDividerModule
+    MatDividerModule,
+    FlexLayoutModule,
+    MatCardModule
   ]
 })
 export class DefaultModule { }

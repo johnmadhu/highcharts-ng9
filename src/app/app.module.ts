@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import {MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
-import { DefaultModule } from './layouts/default/default.module'
+import { DefaultModule } from './layouts/default/default.module';
 
 @NgModule({
   declarations: [
