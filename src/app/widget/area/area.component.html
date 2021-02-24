@@ -1,16 +1,80 @@
-<div fxLayout="row" fxLayoutalign="space-between center" fxLayoutGap="20px" class="stats-cards">
-  <mat-card fxFlex="25">
-    cards
+<div fxLayout="row" fxLayoutalign="space-around center" fxLayoutGap="20px" class="stats-cards">
+  <mat-card fxFlex="23">
+    <div class="text">
+        <h4>New Users</h4>
+        <span class="total">18K</span>
+        <span>
+           <mat-icon color="primary">trending_up</mat-icon>
+        </span>
+        <span class="description">
+          21%
+        </span>
+        <span>of target</span>
+    </div>
+    <highcharts-chart 
+    [Highcharts]="Highcharts"
+    [options]="cardCharts"
+    style="width: 100%; height: 60px; display: block;"
+  ></highcharts-chart>
   </mat-card>
-  <mat-card fxFlex="25">
-    card
+  <!-- 2 -->
+  <mat-card fxFlex="23">
+    <div class="text">
+        <h4>Users Engagement</h4>
+        <span class="total">43K</span>
+        <span>
+           <mat-icon color="primary">trending_up</mat-icon>
+        </span>
+        <span class="description">
+          54%
+        </span>
+        <span>of target</span>
+    </div>
+    <highcharts-chart 
+    [Highcharts]="Highcharts"
+    [options]="cardCharts"
+    style="width: 100%; height: 60px; display: block;"
+  ></highcharts-chart>
   </mat-card>
-  <mat-card fxFlex="25">
-    card
+  <!-- 3 -->
+  <mat-card fxFlex="23">
+    <div class="text">
+        <h4>New Trenders </h4>
+        <span class="total">54K</span>
+        <span>
+           <mat-icon color="primary">trending_up</mat-icon>
+        </span>
+        <span class="description">
+          76%
+        </span>
+        <span>of target</span>
+    </div>
+    <highcharts-chart 
+    [Highcharts]="Highcharts"
+    [options]="cardCharts"
+    style="width: 100%; height: 60px; display: block;"
+  ></highcharts-chart>
   </mat-card>
-  <mat-card fxFlex="25">
-    card
+  <!-- 4 -->
+  <mat-card fxFlex="23">
+    <div class="text">
+        <h4>New Refferels</h4>
+        <span class="total">10K</span>
+        <span>
+           <mat-icon color="primary">trending_up</mat-icon>
+        </span>
+        <span class="description">
+          33%
+        </span>
+        <span>of target</span>
+    </div>
+    <highcharts-chart 
+    [Highcharts]="Highcharts"
+    [options]="cardCharts"
+    style="width: 100%; height: 60px; display: block;"
+  ></highcharts-chart>
   </mat-card>
+  
 
 </div>
 <br/>
@@ -34,7 +98,7 @@
   style="width: 100%; height: 400px; display: block;"
 ></highcharts-chart>
 <br>
-<div fxLayout="row" fxLayoutalign="space-between center" fxLayoutGap="20px" class="stats-cards">
+<div fxLayout="row" fxLayoutalign="space-between center" class="stats-cards">
    <mat-card>
       <highcharts-chart 
       [Highcharts]="Highcharts"
@@ -42,9 +106,6 @@
       style="width: 100%; height: 400px; display: block;"
     ></highcharts-chart>
    </mat-card>
-   <mat-card>
-    card
- </mat-card>
 </div>
 <mat-divider></mat-divider>
-<br/>
+<br><br>

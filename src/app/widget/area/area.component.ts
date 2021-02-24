@@ -14,6 +14,8 @@ export class AreaComponent implements OnInit {
   chartOptions2:{};
   dualCharts:{};
   pieCharts:{};
+  cardCharts:{};
+  public usdeur = 'https://www.highcharts.com/samples/data/usdeur.js'
   constructor() { }
   
 
@@ -21,7 +23,8 @@ export class AreaComponent implements OnInit {
     
     this.chartOptions = {
         chart: {
-            type: 'column'
+            type: 'column',
+            zoomType: 'x'
         },
         title: {
             text: 'Monthly Average Rainfall'
@@ -95,7 +98,8 @@ export class AreaComponent implements OnInit {
 
 this.chartOptions2 = {
     chart: {
-        type: 'area'
+        type: 'area',
+        zoomType: 'xy'
     },
     accessibility: {
         description: null
@@ -182,6 +186,7 @@ this.chartOptions2 = {
     chart: {
         zoomType: 'xy'
     },
+    credits: { enabled: false },
     title: {
         text: 'Get zoom with mouse drag'
     },
@@ -323,5 +328,84 @@ var pieColors = (function () {
             ]
         }]
     }
+
+    this.cardCharts = {
+        chart: {
+            type: 'area',
+            backgroundColor : null,
+            borderWidth : 0,
+            margin : [2,2,2,2],
+            height:60
+        },
+        accessibility: {
+            description: null
+        },
+        title: {
+            text: null
+        },
+        subtitle: {
+            text: null
+        },
+        exporting : {enabled : false},
+        credits: {enabled : false},
+        xAxis: {
+            allowDecimals: false,
+            labels: {
+                enabled:false
+            },
+            accessibility: {
+                rangeDescription: 'Range: 1940 to 2017.'
+            },
+            title :{
+                text:null
+            },
+            startOnTick:false,
+            endOnTick : false,
+            tickOptions:[]
+        },
+        yAxis: {
+            allowDecimals: false,
+            labels: {
+                enabled:false
+            },
+            title :{
+                text:null
+            },
+            startOnTick:false,
+            endOnTick : false,
+            tickOptions:[]
+        },
+        tooltip: {
+            split :true,
+            outside: true,
+        },
+        legend:{
+            enabled:false
+        },
+        plotOptions: {
+            area: {
+                pointStart: 1940,
+                marker: {
+                    enabled: false,
+                    symbol: 'circle',
+                    radius: 2,
+                    states: {
+                        hover: {
+                            enabled: true
+                        }
+                    }
+                }
+            }
+        },
+        series: [{
+            data:[72,29,57,97]
+        }]
+    }
+    HC_exporting(Highcharts);
+setTimeout(()=>{
+    window.dispatchEvent(
+        new Event('resize')
+    )
+},300)
 }
 }
